@@ -3,69 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GIOMIER OWNER</title>
+  <title>GIOMIER OWNER - Enjoy the Music</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    audio, iframe {
+      display: block;
+      margin: 10px 0 20px 0;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    #payment-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    #music-section {
+      display: none;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 80%;
+      font-size: 1em;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #34495e;
+    }
+    #error-message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>Enjoy the Music</h1>
-  <p>SOMERA WEBSITE :</p>
 
-  <!-- Unang kanta -->
-  <h2>Kanta 1: Wala Kang Katulad</h2>
-  <iframe 
-    src="https://drive.google.com/file/d/1d2honIvYSusTeLwt_Fjrp3Nuc8N_BaL6/preview?autoplay=1"
-    width="300"
-    height="80"
-    allow="autoplay"
-    frameborder="0"
-  ></iframe>
+  <div id="payment-section">
+    <p><strong>Ilagay ang iyong GCash received payment code upang mabuksan ang mga kanta:</strong></p>
+    <input type="text" id="payment-code" placeholder="Ilagay ang payment code dito" />
+    <br />
+    <button onclick="verifyPayment()">I-verify</button>
+    <p id="error-message"></p>
+  </div>
 
-  <br/>
+  <div id="music-section">
+    <p>SOMERA WEBSITE :</p>
 
-  <!-- Ikalawang kanta -->
-  <h2>Kanta 2: Ako Nalang Ulit</h2>
-  <iframe 
-    src="https://drive.google.com/file/d/1ejVOZn3Ev8RVL-twfaW9-TN4vvI0FW1b/preview?autoplay=1"
-    width="300"
-    height="80"
-    allow="autoplay"
-    frameborder="0"
-  ></iframe>
+    <!-- Basic audio element example -->
+    <h2>Basic Audio Example</h2>
+    <audio controls>
+      <source src="song.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
 
-  <br/>
+    <!-- Unang kanta -->
+    <h2>Kanta 1: Wala Kang Katulad</h2>
+    <iframe 
+      src="https://drive.google.com/file/d/1d2honIvYSusTeLwt_Fjrp3Nuc8N_BaL6/preview?autoplay=1"
+      width="300"
+      height="80"
+      allow="autoplay"
+      frameborder="0"
+    ></iframe>
 
-  <!-- Ikatlong kanta -->
-  <h2>Kanta 3: Umiiyak ang Puso Ko</h2>
-  <iframe 
-    src="https://drive.google.com/file/d/1ekeDflKtGuVPD7h46Nvv6FXRErZx3mJ3/preview?autoplay=1"
-    width="300"
-    height="80"
-    allow="autoplay"
-    frameborder="0"
-  ></iframe>
+    <!-- Ikalawang kanta -->
+    <h2>Kanta 2: Ako Nalang Ulit</h2>
+    <iframe 
+      src="https://drive.google.com/file/d/1ejVOZn3Ev8RVL-twfaW9-TN4vvI0FW1b/preview?autoplay=1"
+      width="300"
+      height="80"
+      allow="autoplay"
+      frameborder="0"
+    ></iframe>
 
-  <br/>
+    <!-- Ikatlong kanta -->
+    <h2>Kanta 3: Umiiyak ang Puso Ko</h2>
+    <iframe 
+      src="https://drive.google.com/file/d/1ekeDflKtGuVPD7h46Nvv6FXRErZx3mJ3/preview?autoplay=1"
+      width="300"
+      height="80"
+      allow="autoplay"
+      frameborder="0"
+    ></iframe>
 
-  <!-- Ikaapat na kanta -->
-  <h2>Kanta 4: Nothing Gonna Change</h2>
-  <iframe 
-    src="https://drive.google.com/file/d/1ewtcIYUUFWhwzb5-08y0frCb610CgpDc/preview?autoplay=1"
-    width="300"
-    height="80"
-    allow="autoplay"
-    frameborder="0"
-  ></iframe>
+    <!-- Ikaapat na kanta -->
+    <h2>Kanta 4: Nothing Gonna Change</h2>
+    <iframe 
+      src="https://drive.google.com/file/d/1ewtcIYUUFWhwzb5-08y0frCb610CgpDc/preview?autoplay=1"
+      width="300"
+      height="80"
+      allow="autoplay"
+      frameborder="0"
+    ></iframe>
 
-  <br/>
+    <!-- Ikalimang kanta -->
+    <h2>Kanta 5: Obended Knee</h2>
+    <iframe 
+      src="https://drive.google.com/file/d/1f7mDyykhIyzcRhBAOsnnJiteLL8rYLlg/preview?autoplay=1"
+      width="300"
+      height="80"
+      allow="autoplay"
+      frameborder="0"
+    ></iframe>
+  </div>
 
-  <!-- Ikalimang kanta (pinalitang pamagat) -->
-  <h2>Kanta 5: Obended Knee</h2>
-  <iframe 
-    src="https://drive.google.com/file/d/1f7mDyykhIyzcRhBAOsnnJiteLL8rYLlg/preview?autoplay=1"
-    width="300"
-    height="80"
-    allow="autoplay"
-    frameborder="0"
-  ></iframe>
+  <script>
+    function verifyPayment() {
+      const paymentCode = document.getElementById('payment-code').value.trim();
+      const errorMessage = document.getElementById('error-message');
 
+      // Dito mo ilalagay ang tamang payment code o logic para i-verify ang payment
+      // Halimbawa, ang tamang code ay "GCASH1234"
+      if(paymentCode === "GCASH1234") {
+        // Hide payment section and show music
+        document.getElementById('payment-section').style.display = 'none';
+        document.getElementById('music-section').style.display = 'block';
+      } else {
+        errorMessage.textContent = "Maling payment code. Pakisubukang muli.";
+      }
+    }
+  </script>
 </body>
-</html>
+  </html>
+      
